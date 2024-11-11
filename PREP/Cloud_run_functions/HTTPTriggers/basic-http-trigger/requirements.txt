@@ -1,0 +1,24 @@
+import functions_framework
+
+@functions_framework.http
+def square_number(request):
+    """HTTP Cloud Function to return the square of a number provided as a query parameter."""
+    request_json = request.get_json(silent=True)
+    request_args = request.args
+
+   
+    if request_json and 'number' in request_json:
+        number = request_json['number']
+    elif request_args and 'number' in request_args:
+        number = request_args['number']
+    else:
+        return "Please provide a number as an argument, e.g., ?number=3", 400
+
+    try:
+        
+        number = int(number)
+        result = number ** 2
+    except ValueError:
+        return "Invalid input: Please provide a valid integer.", 400
+
+    return str(result)
