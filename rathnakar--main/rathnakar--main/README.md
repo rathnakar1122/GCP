@@ -1,2 +1,0 @@
-# rathnakar-
-my personal info 
