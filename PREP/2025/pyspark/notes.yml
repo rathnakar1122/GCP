@@ -1,0 +1,20 @@
+Data frames:
+ pandas --> run --> strat--> data proc
+
+step 1: --<> need to create data proc cluster  --> create through compute engine --> we need to select compute engine option .
+step 2: pansas -- tutorial --(link) --> 
+step 3: 
+=========================================::
+Day 2:
+1.  code - gcp-plotform --> airflow.compooser - worker node--, dataflow worerk node,
+ --> dataproc = cluster - worker node
+--> cloud functions ---servcerslss --prod
+--> 
+
+if any code not running on given plotform :
+--> linux 
+--> macos
+--> windows
+--> and etc ...
+      --> python pre-installed 
+      -- gcp services - related access permissions...
