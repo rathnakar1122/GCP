@@ -1,9 +1,0 @@
-CustomerID,Name,Age,Gender,City,Email,PurchaseAmount
-1,John Doe,28,Male,New York,johndoe@example.com,150.75
-2,Jane Smith,34,Female,Los Angeles,janesmith@example.com,230.50
-3,Michael Brown,45,Male,Chicago,michaelbrown@example.com,125.00
-4,Emily Davis,23,Female,Houston,emilydavis@example.com,300.20
-5,Daniel Wilson,38,Male,San Francisco,danielwilson@example.com,275.35
-6,Sarah Miller,29,Female,Seattle,sarahmiller@example.com,190.00
-7,David Johnson,41,Male,Denver,davidjohnson@example.com,320.75
-8,Laura White,32,Female,Boston,laurawhite@example.com,215.80
