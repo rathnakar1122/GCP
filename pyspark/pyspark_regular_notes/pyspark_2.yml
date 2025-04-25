@@ -1,0 +1,80 @@
+Apache-Spark was devloped by Matai Zaharia in AMP lab:
+    it was open sourced in the Year 2010:
+        It was donated to apache software foundation in the year of 2013:
+            used for  Bigdata analysis , processing and computing:
+
+
+Defining spark in 4 langues:
+    it is open source 
+    distributed and execution Frame work 
+    cluster computed and Inmemory computation with parallal process style.
+    for large scale data processing
+
+spark can be coded wirh:
+    -scale (deafult)
+    -python 
+    -java
+    -R language 
+
+why pyspark:
+    - it's a python api to use spark
+    -pyspark is a lighting fast technology that is designed for fast computation's
+    -pyspark is a demanding tool among the data engineers to work with bigger datasets.
+    
+Pyspark packages:
+    pyspark packages
+    pyspark
+    pyspark.sql
+    pyspark.streaming.
+    pyspark.ml 
+    pyspark.mllib
+
+execution modules and implemented by using the python:
+
+
+
+
+
+Hadoop:
+    storage --> hdfs --> hadoop distributed file system>
+    processing --> mapreduce --> map reduces is out dated , now we are using pyspark.
+    spark is going to read the data from HDFC it can be stored the data into HDFS.
+    spark has implimentations java and other languages:
+        they will be preferreing for:
+            OLTP --> online trasactional processing --> from this we are going to pull the Data. Bigqury.
+
+        
+pyspark features:
+    1.IN memery computation  --> data processing and storage happening with in the memory level (ram level)
+    2.Lazy evaluation   --> Dataflow gets executed only we perform an action
+    3.fault Tolerence   --> Multiple tasks executed by multiple slaves (slaves means systems), If any one salves goes down then that task will be allocated to others slave (syatems)
+    4.persistence  -- NO need to write again and again, we can use the exsting disk transformations we can accomidate 80gb file into the ram.
+    5.Distributed  --> PySpark distributes data and computations across a cluster of machines Each note of works on a portion of the data enabling prallel processing.
+    6.Parallel processing  --> 
+
+User Interactive applications:
+    User Doesn't give any input here:
+
+
+
+
+Pyspark -->:
+    realtime processing.
+    Batch processing.
+
+NoSQL: 
+
+
+Kafka : 
+    streaming processing
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,68 @@
+1. whaat is pyspark:
+2.why pyspark:
+3.Need for pyspark:
+4.spark python vs scala:
+5.pyspark features:
+6.real life usage of pyspark:
+7.Pyspark jobmarket:
+
+
+1. What us the different ways to persist and RDD?:
+  rdd.persist(StorageLevel.MEMORY_ONLY)-- uses all persist options
+  Rdd.catch() --> only in memory 
+2.what are the situations where RDD is removed from the RAM:
+    1.when the next RDD is ready previous RDD gets removed from the RAM
+    2.when the execution is completed the last RDD gets Removed from the RAM
+3. what are the different ways to unpersist an RDD:
+  1.Force unpersisting it by saying RDD.unpersist()
+  2.if session is closed
+  3.if server shutdown
+4. what are the different ways to create an RDD:
+  1.Using parallelize
+  2.Using textFile
+  3.Using HDFS
+  4.Using S3
+  5.Using HIVE
+  
+5. what is lazy Evaluation in spark:
+  Lazy Evaluation is a mechanism in spark where the dataflow gets executed only when we perform an action 
+  Lazy evaluation is a mechanism in spark where the dataflow gets executed only when we perform an action
+6.what are the different spark Trasformations:
+  -->map()
+  -->filter()
+  -->flatMap()
+  -->mapPartitions()
+  -->union()
+  -->intersection()
+  -->distinct()
+  -->groupByKey()
+  -->reduceByKey()
+  -->.aggregateByKey()
+  -->.sortByKey()
+  -->.join()
+  -->.cogroup()
+  -->.cartesian()
+8.explain failt tolerence model in spark :
+9.Generally which RDD will be persisted?:
+10.Rules in RDD persistance?:
+11.different persistence Operations?:
+12/Can we oersist 2 RDDs at a time?:
+13.Trasformations applied on a RDD -----------:---->return a RDD only:
+14.actions applied on a RDD --------------------> return a python object:
+15. Various Trasformations:
+  -->map() --> each element Trasformations
+              applying Operations on each element of a RDD and returns a RDD
+              Squering Each element of a RDD
+  -->filter() --> 
+  -->flatMap()
+  -->mapPartitions()
+  -->union()
+  -->intersection()
+  -->distinct()
+  -->groupByKey()
+  -->reduceByKey()
+  -->.aggregateByKey()
+  -->.sortByKey()
+  -->.join()    
+  -->.cogroup()
+  -->.cartesian()

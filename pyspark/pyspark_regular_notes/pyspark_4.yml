@@ -1,0 +1,84 @@
+RDD (Resilient Distributed Datasets):
+- Spark Data objects are called as RDDS.
+- RDDS are sub devided into partiones
+- these partiones are distributed across mulple Rams of mulple slaves nodes are processed parallally.
+- RDD programming Style is Dataflow. Dataflow is a sequence collection of Piples 
+- A pipe is a Data operation. such as loading Data , Trasformaing Data , and Filtering the Data and grouping the Data.and merging the Data. And Etc.
+
+
+In Spark, Dataflow is executed in Sequence , RDD by RDD (one after the another with in memory computing features ans persistence features.)
+
+But if a RDD has 20 partionens , then they can executed in Parallel.
+RDD can Not executed Parallel.
+=================================================================================:
+ON a RDD 2 types of operations Can be perform:
+1.Trasformations : 
+Trasformations Create a new RDD from an exsting one by applying a set of a operations. they are lazy in nature, Meaning they do not execute emmediatly 
+Instead they build a logical plan for the computation which is executed when an action is perfomed
+we have 3 types of Trasformations we have .
+   1. Each element Trasformations ex: map() and Flatmap()
+   2. Filter Trasformations : Filter, FilterRange()
+   3. Aggregated Trasformations: groupByKey()
+
+
+2.Actions
+ When action is perfomed on a Rdd then only the the dataflow will be executed: 
+
+1.collect():
+   t will collect all partitons data of diffrernce salve machines into clinet machine 
+   ex - RDD. collect()
+   2.count() --> Counts the number if element in the RDD. RDD.Collect Take.
+   3. Take () --> Take First 'n' no of elemnets in a RDD.  --> RDD.Take(10)
+   4. SaveAsTextFile() --> Save to hadoop distributed file system
+
+======================================================================:
+fault tolerence model in spark:
+   case 1: 
+   when current RDD machine is Down.
+   R1 ----------> R2 ------------> o/p
+   During the execution of current RDD(R2), if any of of the partition of current RDD is down then all current RDD partitions (p1,p2,p3,of R2) will be deallocated (cleared from the RAM)
+   And re-intiated or reloaded in another salves by taking input of from previous RDD(R1)
+
+=======================================================================:
+RDD1 --------------->sc.SaveAsTextFile("............./file1.txt",7)
+
+CASE 2: IF PREVIOUS RDD MACHINE IS DOWN
+
+R1 ------------------>R2----------------->R3
+S1 ------------------>S2 ---------------->S3
+
+During execution of R3, while taking i/p from R2
+Here R2 can't be reloaded or reinitiated in other machines becoz R2 i/p is R1
+where R1 is not available in Ram. So the process should start from begining or from persistemce RDD
+========================================================================:
+CASE 3: if a persistend Rdd machine is down
+R1 ----------> R2 ----------> R3 --------------> R4 ---------> R5
+S1 -----------> S2 ---------> S3 ---------------> S4 ---------> S5
+
+R3 is persistemce
+But sudenlty s3 is Down then the flow will be reexecuted from the from begining or from the avilable sources automatically till R3
+performing action and R# will be re persisted.
+
+======================================================================:
+CASE 4: IF S4 ID DOWN 
+
+R1 ----------> R2 ----------> R3 --------------> R4 ---------> R5
+S1 -----------> S2 ---------> S3 ---------------> S4 ---------> S5
+
+R3 IS persisted:
+while computing R5 and whilte taking input from r4 from R4 . if R4is failed then input is taken from R3 
+which is availble in RAM , and reloading the partions of R$ in other machiens and computing and provides input to R5
+
+=====================================================================:
+case 5: Cen we persistet  RDDS:
+
+R1 ----------> R2 ----------> R3 --------------> R4 ---------> R5 ---------R6
+S1 -----------> S2 ---------> S3 ---------------> S4 ---------> S5 ------->S6
+
+if R3 and R5 persisted
+
+case 1: if R5 machine is donw what happens ???
+ flow will re-executes from R3 and R5 will be re-persisted
+
+case 2: if R3 machine is down , flow will be re-executed from R1 to R3 automatically and R3 will be repersisted
+=======================================================================:

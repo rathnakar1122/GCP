@@ -1,0 +1,38 @@
+Pyspark Features:
+1. In memory computation : storage and processing heppening within the memory (RAM) level.
+2.Lazy Evaluation : The Dataflow gets executed only when we perform an action.
+3.Fault Tolerence : Multiples tasks get executed in multiple slaves, If any one leaves goes Down then that task be allocated to other slaves (System)
+4.Persistence: Trasformations Can be reused
+5.Distributed :
+6.Parallel Processing :
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------:
+Pyspark mainly designed for:
+1) Batch application.
+2) Iterative algarithams
+3) Interactive quries 
+4) streaming 
+
+--------------------------------------------------------------------------:
+RDD (Resilient Distributed Database):
+- Spark Data objects are callled as RDDS
+- RDDs are sub-devided into partiones
+- these partiones are distibuted accross multiple Rams of multiple slave nodes and are processed parallely
+- RDD programming style is Dataflow.
+- Dataflow is Sequence collection of pipes.
+- A pipe can be any operation such as loading data, Trasformaing the Data, Filtering Data, Grouping Data, Merging Data etc.
+- A spark , Dataflow is executed in Sequence RDD by Rdd one after the another. In memory computing features and Persistence fetures.
+   2 RDD cannot be executed in parallel as One RDD o/p is the input to the next RDD.
+    But if a RDD has 30 partiones then they can be executed in parallel.
+
+-------------------------------------------------------------------------:
+In the above flow, Here each time the flow is re-executed from the begining the begining even througj the 1st and 3rd time.
+
+To avoid
+P1 and P2 and P3 will perform the operations:
+
+RDD is immutable - we can change input to output.
+It's less then or equal.
+RDD can't be processed parallally.
+Spark can be coded with Multiple languages:
+scala and python and Java and R languages.

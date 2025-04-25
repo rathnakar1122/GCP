@@ -1,0 +1,35 @@
+IN memory computation : 
+Storage and processing happening within the memory (RAM) Level:
+Lazy Evaluation: The dataflow gets executed only when we perform an action:
+Fault tolerence: Mulitiple Tasks executed by mulple slaves (systems), if any one slave :
+Motivation Towords Pyspark: 
+Yahoo :
+Table ---> 100Gb ---->1024 cols 
+===================================================================================:
+
+Pyspark mainly designed for Batch applications:
+1. Batch applications
+2. Interative algorithhms 
+3. Interative queries 
+4. streaming
+===============================================:
+actions :
+        |
+        | --> collect 
+        | --> Count 
+        | --> Takes
+        | --> 
+==========================================================:
+Trasformations applied on a RDD --------------->return a RDD only
+actions applied on a RDD --------------------> return a python object 
+
+r1= sc.textFile("..............."):
+r2=r1.filter(...............):
+r3=r2.groupby(".................."):
+r4=r3.map()
+r4.collect()
+
+
+==========================================================:
+
+Questions 

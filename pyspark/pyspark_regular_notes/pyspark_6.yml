@@ -1,0 +1,34 @@
+pyspark:
+=======
+
+pyspark used for :
+  Distributed SQL engine
+  creating data pipelines
+  ingestion of data into database
+  running machine learning algorithms
+  working with Graphe or Data streams.
+  working with dataframes
+
+Real_life usage of pyspark:
+-------------------------
+Commercial sector, health care And Entertainment sector, NEtflix using the apache_spark.and Trades and E-commerce sector.
+Flipkart, Amazon, and many other companies are using pyspark for their data processing.
+It used enhance the performance of the data processing. 
+
+spark --->dataobjets ---->RDD(resilient Distributed Datasets)
+these partiosn are distributed accross the slaves -->
+
+
+===================================================================:
+
+RDD Operatiosn : 2 Operations can be perform
+1. Transformation
+2. Actions
+
+if trasfromatiosns applied on RDD ---> Result will be RDD only
+if actions applied on RDD ---> Result will be python object
+
+Convert python object to spark object:
+
+
+

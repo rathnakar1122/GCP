@@ -1,0 +1,70 @@
+
+what is apache spark:
+ --> big data analysis
+ --> processing data computation 
+ --> apache spark is the open source , distributed computing systems for bigdata processing and data analysis
+ --> python is a excution models 
+ 
+ why pyspark:
+  __. python spi used for pyspark 
+  very demanading tools for Data engineering.
+  --> mainly used distributed sql 
+  --> creating data pipelines.
+  --> injection data into databases.
+  -->ML olgorithoms 
+  --> Graph or data streams 
+ 
+what is the need for pyspark:
+  --> Data is distributed accross multiple systems to process parallally.
+  --> spark is a in memory data computations.
+  --> pyspark is a dataflow language , out of one will be the input of next one.
+  --> this is huge data and BigData
+  --> it is verious processing unit.
+
+spark can be coded with python , scla , java and:   spark is build using scala:
+    where python is brought especially for machine learning:
+
+
+python:
+1. python is dynamic typed.
+2.python it has a huge community
+3.python containsts poerfull libraris
+4.
+
+scala:
+1.static typed.
+2.smaller community
+3.scla also got powerfull libraris.
+4.less compared with python.
+
+
+Pyspark features: 
+  In memory computations
+  lazy evaluation.
+  when ever required we can be executed.
+  falut tolerence 
+  persistence means it is available in the ram
+  pyspark is dataflow language
+  distributed and parallel processing
+
+Real-time usage of pyspark:
+  1.commercial sector
+  2.health care
+  3.Entertainment industry
+  4.E-commerece
+  5.spark advetaiseing.
+  6.tourisum industry
+  
+Table --> 100tb--->1024tb cols
+task: Sorting based on 16 cols
+
+Time taken:
+  oracle ---3.4 iminutes
+  mysql --6 days
+  Teradata --> 4.5 hours
+  Netezza --> 3.5 hours
+  Hadoop --> 3.4 mins.
+  pyspark --> 3.5mins.
+
+  we can use any kind of data with the pyspark:
+    

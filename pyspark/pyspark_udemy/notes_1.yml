@@ -1,0 +1,11 @@
+HDFS:
+Storage (storing the Data is problem due it's massive value and varity)
+processing (due to massive data processing takes a lot of time)
+
+
+storage problem --> Hadoop 
+processing problem --> map reduces --> spark (faster than map reduce)
+
+Traditional way of processing data:
+local file system --> Hadoop --> Spark
+===================================:
