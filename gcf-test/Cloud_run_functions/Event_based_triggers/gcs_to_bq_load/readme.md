@@ -1,0 +1,1 @@
+gcloud functions deploy gcs_to_bq_load --runtime python310 --trigger-event-filters="type=google.cloud.storage.object.v1.finalized" --trigger-event-filters="bucket=crf-event" --timeout 300 --entry-point gcs_to_bq_load --region us-central1 --allow-unauthenticated --gen2 --source "C:/ENV/PREP/Cloud_run_functions/Event_based_triggers/gcs_to_bq_load"

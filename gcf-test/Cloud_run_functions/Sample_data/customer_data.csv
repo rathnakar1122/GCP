@@ -1,0 +1,4 @@
+cust_id	cust_name	phone_number	email_address	address	source_system_date
+101	John Doe	9876543210	john.doe@example.com	123 Elm Street, NY	2025-01-01
+102	Jane Smith	9123456789	jane.smith@example.com	456 Maple Avenue, CA	2025-01-15
+103	Ravi Kumar	7890123456	ravi.kumar@example.in	789 Pine Road, Mumbai	2025-01-20

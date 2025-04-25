@@ -1,0 +1,87 @@
+Google cloud Function:
+ --> Auto Scaling
+ --> Run time support --> java, python, node, and Go
+ --> pricing model will be the pay as you go 
+            * first 2 millians is for free 
+            * after that 0.40 per millian request.
+ --> pricing depends on memory & compute aslo 
+ --> each function execution is independent 
+ --> function execution has timeout 
+          * defalut is 1 min and max 50 sec (9 minuyes )
+
+
+=====================================================:
+pusub :
+Http:
+cloud storages:\
+
++=====================================================:
+
+Case --> 1:
+--> We are Going to deploy One Google cloud fucntion having a http based trigger
+--> in case of testing we are manually hit the URL of http though which this cloud invoation will happen 
+--> INstead of manually hitting the URL as a HTTP trigger instead we are going to use in the particular use case as a Git hub webhook servcer
+--> Http Url manually via our browser, Now we are going to intergrate with Github webhook.
+we are going to Integrate with the slack APi.
+
+
+-->  API the chat message service a slcak to send a message at some particular channel to this slack.
+We are going to use a two different third party service integration:
+
+One is instead of manually hitting the URL, we are going to use GitHub webhook.
+And second one is we are going to integrate with the Slack message, send message API.
+
+we are going to send slack message and send message to API:
+----------------------------------------------------------:
+
+
+Function - 2 : Cloud  Firestore & Pubsub : 
+In this section we will deploy cloud function having firestore NOSQL database trigger & forward data to Cloud PubSub for further Processing:
+
+Filestore Trigger --> google cloud function --> google cloud pubsub
+
+File stores are like No sql databases
+
+===============================================================================:
+===============================================================================:
+Function - 3 : Face Detection with Vision API 
+ In this section we will deploy cloud function having Google Cloud Storage trigger & use Cloud Vision API for face detection.
+
+Google cloud storage --> Google cloud functions --> Google cloud storage product 
+whenever we create any object inside the Google Cloud storage, our function, Google Cloud function will be executed
+This cloud function will detect a face, coordinate that inside the image, whatever you have uploaded in a Google cloud storage where exactly your face coordinates reside
+
+
+
+=======================================================================================:
+=======================================================================================:
+Function - 4 : Cloud Pubsub & Twillo Integration : 
+In this section we will deploy cloud function with Cloud pubsub trigger  & send sms with Twillo API.
+
+
+=====================================================================================:
+=====================================================================================:
+
+
+1. HttP: trigger :
+
+import functions_framework
+
+
+@functions_framework.http
+def httop_trigger(request):   
+    request_json = request.get_json(silent=True)
+    request_args = request.args
+
+
+
+2. Event Trigger:
+
+umport functions_framwork 
+
+@ functions_framwork.cloud_event
+
+def event_trigger(cloud_event):
+    data - cloud_event.data
+    bucket = data ["bucket"]
+    name = data ["name"]

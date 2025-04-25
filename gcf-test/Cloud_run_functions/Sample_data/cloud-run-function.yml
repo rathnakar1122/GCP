@@ -1,0 +1,157 @@
+cloud run functions:
+
+is a execution environment provided by cloud plotforms that enables run your code in responce to events withput managing by any underlying infrastrutures
+1. Event driven execution 
+2. Serverless 
+3. pay as you go 
+4. Languages support
+
+it's a servicess computing build applications
+Computing is analysis services 
+Serverless is a compute come serverless 
+
+#RUN your code with Zero servcer Management using scalable pay as you go functions services (FAAS)
+--------------------------------------------------------------------------------------------------
+it is used to for devlepment and deployment:
+
+develop
+1.Console - Inline editor 
+2.Local Ide - SDK support
+
+deployment:
+
+1.Console
+2.Test and Deployment from Locally. Yes
+
+Trigger:
+1. Cloud scheduler.
+2.workflows
+3.Evener based.
+
+Benefints of cloud functions:
+scalability,
+co-effective 
+Rapid Devlopment
+
+When to use the Cloud functions:
+
+Microservices
+Data processing 
+IoT and mobile
+Automated workflows
+
+Event based triggers:
+Deplying cloud functions:
+Cloud Console
+Gcloud CLI
+
+Runtime environment and Runtimes:
+Languages Runtime --> cloud functions supports Node Js, python and Go and Java . .Net Node js.
+execution environment
+Memory and CPU  --> 
+
+
+Scaling and Concurrency:
+auto Scaling
+Concurrency
+
+Moniteting and Logging:
+
+
+ways to use:
+===========
+
+Devlop:
+1.console - inline efitor
+2.Local IDE - SDK support
+
+Deployment:
+1.console
+2.Test and deployment from locally* Yes
+
+Trigger:
+------
+1.cloud scheduler
+2.workflows
+3.Event base/Http Trigger.
+
+
+========================
+Cloud Functions:
+cloud run.
+cloud build
+GCS bucket.
+artifacrigistry .
+Log explorer
+
+python 
+SQL.
+
+===================:
+==================:
+Devloping cloud run function and deploying from LOcal :
+
+
+
+
+Basic syntax of UDF in python:
+  def function_name <parameter>:
+        function_body
+        return <statement>
+
+  function_name (args1, arg2)
+
+
+2. Application of python UDFs with gcp cloud run functions:
+a) CRF with HTTP trugger: Done  
+b ) cef with event based trigger: 
+    note: event must be happen in the one of the gcp service....
+          example : cloud storage , Bigquery, pubsub
+
+realtime - most - of the - CRF - functions:
+     E1. Object finalized  : when an object placed in gcs buckt. Or when an exsting objet is overwritten we call that object is finalized
+Requirement:
+    - whenever a clinet or a vendor uploads a .txt file or .csv file into gcs bucket 
+
+
+
+Question:
+what is URI:
+ -->Universal resource identifier
+what is Url:
+ -->Universal resource locator
+what is the use of f-string in python:
+  --> 
+what is the use format in string functions' of python:
+  --> 
+
+1.HTTP:/
+
+import functinon_framwkwork
+@functions_framework.http
+def http_function_example(request):
+    json_data = request.get_json(silent=True)
+    request_args = request.args
+2.Event /
+
+import functions_framework
+@functions_framewrok.cloud_event
+
+def gcstobigqueryload(cloud_event):
+  data = cloud_event.data
+  bucket = data["bucket"]
+  name = data["name"]
+  
+
+
+
+-->
+1. Intial Load
+2.Incremental Load:
+        --> Transactioons/facts table:
+                orders, concellation orders , sales, cancellation
+        --> Dimention table:
+                customer , product, suks, discounts 
+
+        SCD types:
+            --> SCD type0, 1,2,3,4,5
